@@ -1,6 +1,7 @@
 name: Release - Conda
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - v*
