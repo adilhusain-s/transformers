@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   trufflehog:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04-ppc64le
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
