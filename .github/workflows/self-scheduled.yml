@@ -500,7 +500,7 @@ jobs:
     # Let's only do this for the job `run_models_gpu` to simplify the (already complex) logic.
     if: ${{ always() && inputs.job == 'run_models_gpu' }}
     name: Extract warnings in CI artifacts
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-22.04-ppc64le
     needs: [setup, run_models_gpu]
     steps:
       - name: Checkout transformers

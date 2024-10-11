@@ -20,7 +20,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-22.04-ppc64le
 
     if: ${{ contains(github.event.head_commit.message, '[build-ci-image]') || contains(github.event.head_commit.message, '[push-ci-image]') && '!cancelled()' || github.event_name == 'schedule' }}
 
@@ -64,7 +64,7 @@ jobs:
           tags: ${{ env.TAG }}
 
   notify:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-22.04-ppc64le
     if: ${{ contains(github.event.head_commit.message, '[build-ci-image]') || contains(github.event.head_commit.message, '[push-ci-image]') && '!cancelled()' || github.event_name == 'schedule' }}
     steps:
       - name: Post to Slack

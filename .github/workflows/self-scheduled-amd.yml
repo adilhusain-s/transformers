@@ -39,7 +39,7 @@ env:
 jobs:
   check_runner_status:
     name: Check Runner Status
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-22.04-ppc64le
     steps:
       - name: Checkout transformers
         uses: actions/checkout@v4

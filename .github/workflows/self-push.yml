@@ -573,7 +573,7 @@ jobs:
 
   send_results:
     name: Send results to webhook
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-22.04-ppc64le
     if: always()
     needs: [
         setup,
